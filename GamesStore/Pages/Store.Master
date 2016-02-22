@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Store.master.cs" Inherits="GamesStore.Pages.Store" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>GamesStore</title>
+    <link rel="stylesheet" href="/Content/Styles.css" />
+    <%: System.Web.Optimization.Scripts.Render("~/bundles/validation") %>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="header">
+        <SS:CartSummary runat="server" />
+        <button name="login" id="login" type="submit" runat="server" value="1">Login</button>
+        <div class="title">GAMES STORE</div>
+
+    </div>
+        <div id="search">
+            <strong>Search:</strong>
+            <input type="text" name="keyword" size="20" />
+            <button name="login" type="submit" value="20">Find</button>
+        </div>
+
+        <div id="categories">
+            <SS:CatLinks runat="server" />
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="bodyContent" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+    <footer>
+        <div>
+            <p id="name">GAMES STORE                    Contact us at 616-696-9989</p>
+        </div>
+    </footer>
+    </form>
+    <p id="footerspace"></p>
+</body>
+</html>

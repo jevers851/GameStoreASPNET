@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Customer.Master.cs" Inherits="GamesStore.Pages.Account.CustomerMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="/Content/CustomerStyles.css" />
+</head>
+<body>
+    <form id="customerForm" runat="server">
+        <div id="header">
+            <SS:CartSummary runat="server" />
+            <button name="login" id="login" type="submit" runat="server" value="1">Login</button>
+            <div class="title">Game Store: Customer Login</div>
+        </div>
+        <div id="search">
+            <strong>Search:</strong>
+            <input type="text" name="keyword" size="20" />
+            <button name="search" type="submit">Find</button>
+        </div>
+
+        <div id="categories">
+            <SS:CatLinks runat="server" />
+        </div>
+
+        <div class="CustomerContent">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <footer>
+        <div>
+            <p id="name">GAMES STORE                    Contact us at 616-696-9989</p>
+        </div>
+    </footer>
+    <p id="footerspace"></p>
+
+</body>
+</html>
